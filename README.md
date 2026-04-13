@@ -1,64 +1,141 @@
-# Task Management Web App UI
+# 🚀 TaskFlow — Task Management Web Application
 
-UI bundle based on [Task Management Web App UI (Figma)](https://www.figma.com/design/RiuKBAoqfLcLohrc9DghGe/Task-Management-Web-App-UI).
+> *Transforming complex workflows into simple, organized, and trackable tasks.*
 
-## Prerequisites
+---
 
-- **Node.js** (for frontend + API)
-- **MongoDB** reachable from your machine:
-  - **Local:** install MongoDB Community or run it in Docker; default URI is `mongodb://127.0.0.1:27017/taskflow`.
-  - **Atlas:** create a cluster, user, and network access (allow your IP or `0.0.0.0/0` for testing). Put the connection string in `backend/.env` as `MONGODB_URI` (see `backend/.env.example`).
+## 📌 Overview
+**TaskFlow** is a full-stack task management web application designed to streamline team collaboration, improve productivity, and simplify workflow management within organizations.
 
-The API **exits on startup** if it cannot connect to MongoDB.
+It provides a centralized platform where managers can assign tasks, monitor progress, and generate reports, while employees can efficiently manage their assigned work and track deadlines.
 
-### `backend/.env`
+---
 
-Create `backend/.env` from `backend/.env.example`. The server loads this file from the **backend** folder even if you start Node from another directory.
+## ✨ Features
+- 🔐 Role-Based Authentication (Admin / Manager / Employee)
+- 📋 Task Creation, Assignment & Tracking
+- 📊 Employee Dashboard with Task Overview
+- 🏖️ Leave Management System
+- 📈 Reports & Analytics
+- ⚡ Real-Time Updates
+- 📱 Responsive & Modern UI
 
-### Frontend API URL (optional)
+---
 
-With **`npm run dev`**, `/api` is proxied to `http://localhost:4000`.
+## 🛠️ Tech Stack
 
-If you open a **production build** or run Vite without the proxy, set in the project root:
+### Frontend
+- React.js  
+- TypeScript  
+- Tailwind CSS  
 
-```bash
-# .env.local (Vite)
-VITE_API_BASE_URL=http://localhost:4000
+### Backend
+- Node.js  
+- Express.js  
+
+### Database
+- MongoDB / MySQL  
+
+### Tools
+- Git & GitHub  
+- Postman  
+- VS Code  
+
+---
+
+## 📂 Project Structure
+```
+TaskFlow/
+│
+├── frontend/        # React frontend
+├── backend/         # Node.js backend
+├── src/             # Main application source
+├── public/          # Static assets
+├── package.json
+└── README.md
 ```
 
-## Run locally (two terminals)
+---
 
-1. **Backend** (from repo root):
+## ⚙️ Installation & Setup
 
-   ```bash
-   cd backend
-   npm install
-   npm start
-   ```
-
-   Optional: copy `backend/.env.example` to `backend/.env` and edit `MONGODB_URI`, `JWT_SECRET`.
-
-   Or from repo root: `npm run dev:backend`
-
-2. **Frontend** (repo root):
-
-   ```bash
-   npm install
-   npm run dev
-   ```
-
-   Open the URL Vite prints (e.g. `http://localhost:5173`). The dev server proxies `/api` to `http://localhost:4000`.
-
-## First-time setup
-
-1. On the login screen, use **First time? Create the manager account** (or go to `/setup`).
-2. Sign in as **Manager** with that email and password.
-3. Go to **Employees → Add employee** so people can sign in as **Employee**.
-
-All tasks, leave requests, and profiles are stored in MongoDB.
-
-## Build frontend only
-
+### 1. Clone the repository
 ```bash
-npm run build
+git clone https://github.com/your-username/taskflow.git
+cd taskflow
 ```
+
+### 2. Install dependencies
+```bash
+npm install
+```
+
+Backend setup:
+```bash
+cd backend
+npm install
+```
+
+---
+
+### 3. Run the application
+
+Frontend:
+```bash
+npm run dev
+```
+
+Backend:
+```bash
+npm start
+```
+
+---
+
+## 🔐 Environment Variables
+
+Create a `.env` file inside the backend folder:
+
+```
+PORT=5000
+DB_URI=your_database_url
+JWT_SECRET=your_secret_key
+```
+
+---
+
+## 📸 Screenshots
+_Add your UI screenshots here_
+
+---
+
+## 🎯 Use Case
+TaskFlow helps organizations:
+- Improve task visibility and accountability  
+- Reduce manual tracking efforts  
+- Enhance team productivity  
+
+---
+
+## 📌 Future Enhancements
+- 🔔 Notifications & Reminders  
+- 📅 Calendar Integration  
+- 🤖 AI-Based Task Prioritization  
+- 📊 Advanced Analytics Dashboard  
+
+---
+
+## 🤝 Contributing
+Contributions are welcome!  
+Fork the repo and submit a pull request.
+
+---
+
+## 📄 License
+This project is licensed under the MIT License.
+
+---
+
+## 👨‍💻 Author
+**Soneesh Reddy**
+
